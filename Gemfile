@@ -46,3 +46,4 @@ gem "suspenders", group: [:development, :test]
 
 gem 'rack-mini-profiler', require: false
 gem 'factory_bot_rails', group: [:development, :test]
+gem 'bourbon', '>= 6.0.0'
