@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_194730) do
+ActiveRecord::Schema.define(version: 2021_07_09_171651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "days", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "time_slots", force: :cascade do |t|
+    t.integer "length", default: 0, null: false
+    t.bigint "days_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["days_id"], name: "index_time_slots_on_days_id"
+  end
 
   create_table "todos", force: :cascade do |t|
     t.string "name", null: false
