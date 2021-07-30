@@ -22,6 +22,7 @@ gem "sprockets", "< 4"
 gem "title"
 gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin, :jruby]
 gem "webpacker"
+gem 'hotwire-rails'
 
 group :development do
   gem "listen"
